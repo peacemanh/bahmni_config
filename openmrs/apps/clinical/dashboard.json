@@ -25,6 +25,54 @@
                     "countyDistrict"
                 ]
             },
+            "triageValue":{
+                "translationKey":"DASHBOARD_TITLE_EMERGENCY_DEPARTMENT_TRIAGE_FORM_KEY",
+                "type":"vitals",
+                "isObservation":true,
+                "displayOrder":10,
+                "dashboardConfig":{
+                    "conceptNames":[
+                        "Triage Record Vital Sign", "Triage color", "Triage Color Result", "Triage Score Result"
+                    ],
+                    "showDetailsButton":true,
+                    "numberOfVisits":2
+                },
+                "expandedViewConfig":{
+                    "conceptNames":[
+                        "Triage Record Vital Sign", "Triage color", "Triage Color Result", "Triage Score Result"
+                    ],
+                    "numberOfVisits":2,
+                    "scope":"latest",
+                    "showDetailsButton":true,
+                    "pivotTable":{
+
+                    }
+                }
+            },
+            "centralTriageValue":{
+                "translationKey":"DASHBOARD_TITLE_CENTRAL_TRIAGE_FORM_KEY",
+                "type":"vitals",
+                "isObservation":true,
+                "displayOrder":11,
+                "dashboardConfig":{
+                    "conceptNames":[
+                        "Central Triage Form"
+                    ],
+                    "showDetailsButton":true,
+                    "numberOfVisits":2
+                },
+                "expandedViewConfig":{
+                    "conceptNames":[
+                        "Central Triage Form"
+                    ],
+                    "numberOfVisits":2,
+                    "scope":"latest",
+                    "showDetailsButton":true,
+                    "pivotTable":{
+
+                    }
+                }
+            },
             "forms2Validations": {
                 "type": "formsV2",
                 "displayOrder": 2,
@@ -470,6 +518,41 @@
                 ],
                 "displayOrder":0
             },
+            "adultERTriageForm": {
+                "title": "Adult ER Triage Form",
+                "printing": {
+                    "title": "Adult ER Triage Form",
+                    "header": "Adult ER Triage Form",
+                    "logo": "../images/bahmniLogo.png"
+                },
+                "sections": {
+                
+                    "Adult ER Triage Form":{
+                        "translationKey":"Adult ER Triage Form",
+                        "type":"adultERTriageForm",
+                        "isObservation":true,
+                        "displayOrder":14,
+                        "dashboardConfig":{
+                            "conceptNames":[
+                                "Emergency Triage Form"
+                            ],
+                            "showDetailsButton":true,
+                            "numberOfVisits":2
+                        },
+                        "expandedViewConfig":{
+                            "conceptNames":[
+                                "Emergency Triage Form"
+                            ],
+                            "numberOfVisits":2,
+                            "scope":"latest",
+                            "showDetailsButton":true,
+                            "pivotTable":{
+        
+                            }
+                        }
+                    }
+                }
+            },   
             "growthChart":{  
                 "type":"observationGraph",
                 "translationKey": "DASHBOARD_TITLE_GROWTH_CHART",
@@ -566,6 +649,41 @@
                     }
                 },
                 "displayOrder":6
+            }
+        }
+    },
+    "eDTriageForm-GYN": {
+        "title": "ED Triage Form - GYN",
+        "printing": {
+            "title": "ED Triage Form - GYN",
+            "header": "ED Triage Form - GYN",
+            "logo": "../images/bahmniLogo.png"
+        },
+        "sections": {
+            "ED Triage Form - GYN":{
+                "translationKey":"ED Triage Form - GYN",
+                "type":"eDTriageForm-GYN",
+                "isObservation":true,
+                "displayOrder":17,
+                "dashboardConfig":{
+                    "conceptNames":[
+                        "ED Triage Form - GYN"
+                        
+                    ],
+                    "showDetailsButton":true,
+                    "numberOfVisits":2
+                },
+                "expandedViewConfig":{
+                    "conceptNames":[
+                        "ED Triage Form - GYN"
+                    ],
+                    "numberOfVisits":2,
+                    "scope":"latest",
+                    "showDetailsButton":true,
+                    "pivotTable":{
+
+                    }
+                }
             }
         }
     },
