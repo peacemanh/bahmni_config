@@ -1,4 +1,14 @@
 {
+  "emergency_triage": {
+    "id": "bahmni.registration",
+    "extensionPointId": "org.bahmni.home.dashboard",
+    "type": "link",
+    "translationKey": "MODULE_LABEL_TRIAGE_KEY",
+    "url": "../registration/index.html#/patient/triagePatient",
+    "icon": "fa-ambulance",
+    "order": 1,
+    "requiredPrivilege": "app:emergency"
+  },
   "registration": {
     "id": "bahmni.registration",
     "extensionPointId": "org.bahmni.home.dashboard",

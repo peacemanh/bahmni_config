@@ -18,21 +18,40 @@
         {
             "id": "org.bahmni.registration.conceptSetGroup.observations",
             "description": "Registration Second Page Forms"
+        },
+        {
+            "id": "org.bahmni.patient.searchPrograms",
+            "description": "Search for program patients"
+        },
+        {
+            "id": "org.bahmni.registration.triage.dashboard",
+            "description": "Triage Dashboard"
         }
+        
+        
     ],
     "contextModel": [
         "patientUuid",
         "activeVisitUuid"
     ],
-    "config" : {        
-        "defaultIdentifierPrefix":"AaBET - ",
+    "config" : {
+        "erTriageVisitTypes":{
+            "Male":["Adult ER", "Pediatrics ER"],
+            "Other":["Gynecology Emergency", "Adult ER", "Labour Ward", "Pediatrics ER"]
+        },
+        "erTriageFormLookup":{
+            "Gynecology Emergency":["edconfig","edforms"],
+            "Adult ER": ["erconfig","erforms"],
+            "Labour Ward": ["obconfig","obforms"],
+            "Pediatrics ER": ["pdconfig", "pdforms"]
+        },
         "patientInformation": {
             "insuranceInformation": {
                 "title": "Insurance Information",
                 "translationKey": "Insurance_Details",
                 "attributes": [
-                    "InsuranceName",
                     "InsuranceID",
+                    "InsuranceName",
                     "InsuranceCode",
                     "InsuranceZone",
                     "InsuranceExpiryDate"
@@ -42,7 +61,21 @@
                 "title": "Credit Information",
                 "translationKey": "Credit_Details",
                 "attributes": [
+                    "Credit Information"
+                ]
+            },
+            "creditCompanies": {
+                "title": "Credit Companies",
+                "translationKey": "Credit Companies",
+                "attributes": [
                     "credit companies"
+                ]
+            },
+            "freeInformation": {
+                "title": "Free",
+                "translationKey": "Free",
+                "attributes": [
+                    "Free"
                 ]
             },
             "additionalPatientInformation": {
@@ -53,8 +86,8 @@
                     "Address",
                     "IDNumber",
                     "IDType"
-                ],
-                "required": true
+                    
+                ]
             },
             "hidden": {
                 "attributes": [
@@ -71,7 +104,9 @@
                     "occupation",
                     "secondaryIdentifier",
                     "education",
-                    "caste"
+                    "caste",
+                    "Insurance",
+                    "Credit Company"
                 ]
             },
             "defaults":  {
@@ -91,6 +126,7 @@
         },
 
         "autoCompleteFields":["familyName", "caste", "middleName", "givenName"],
+        "mandatoryPersonAttributes": ["Originofreferral", "PaymentMethod", "Free", "Credit Information", "InsuranceID", "credit companies"],
         "defaultVisitType": "OPD",
         "searchByIdForwardUrl": "/patient/{{patientUuid}}",
         "showMiddleName": true,
@@ -110,9 +146,83 @@
             "translationKey": "REGISTRATION_PRINT_REG_CARD_KEY",
             "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print_index.html",
             "shortcutKey": "z"
+            },
+            {
+                "label": "P<u>r</u>int ER Triage Form",
+                "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print_ErTriage.html",
+                "shortcutKey": "r"
+            },
+            {
+                "label": "P<u>r</u>int ED Triage Form",
+                "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print_ed_triage.html",
+                "shortcutKey": "s"
+            },
+            {
+                "label": "P<u>r</u>int Obstetrics Triage Form",
+                "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print_obstetrics.html",
+                "shortcutKey": "t"
+            },
+            {
+                "label": "P<u>r</u>int Pediatrics Triage Form",
+                "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print_pediatrics.html",
+                "shortcutKey": "p"
+            },
+            {
+                "label": "P<u>r</u>int CR Triage Form",
+                "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print_CrTriage.html",
+                "shortcutKey": "r"
+            },
+            {
+                "label": "P<u>r</u>int Patient MRN",
+                "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print_mrn_only.html",
+                "shortcutKey": "r"
             }
         ],
+        "conceptSetUI": {
+            "REGISTRATION FEES": {
+                "required": true,
+                "label": "Fee"
+            },
+            "FHS": {
+                "buttonSelect": true
+            },
+            "defaults":{
+                "FHS": "Present",
+                "Trige Date and time of Arrival": "now",
+                "Trige Date and Time of Triage": "now"
+            },
+            "Trige Date and time of Arrival": {
+                "required": true
+            },
+            "Trige Date and Time of Triage": {
+                "required": true
+            },
+            "Triage Red": {
+                "multiSelect": true
+            },
+            "Triage Orange": {
+                "multiSelect": true
+            },
+            "Triage Yellow": {
+                "multiSelect": true
+            },
+            "Triage Chief Complaint": {
+                "multiSelect": true,
+                "required": true
+            },
+            "Triage Mobility": {
+                "required": true
+            },
+            "Triage AVPU": {
+                "required": true
+            },
+            "Triage Trauma": {
+                "required": true
+            }
+            
+        },
         "fieldValidation" : {
+            "registrationNumber" : {"pattern" : "[0-9]{4,9}", "errorMessage" : "Should between 4 and 9 characters"},
             "primaryContact" : {"pattern" : "[0-9]{8,10}", "errorMessage" : "Should be 12 characters starting with 91 (country code)"},
             "landHolding" : {"pattern" : "[0-9]{0,3}", "errorMessage" : "Should be between 1 to 999 acres"},
             "familyName" : {"pattern" : "[a-zA-Z]{0,}", "errorMessage" : "Should contain characters"},
@@ -125,12 +235,19 @@
                 "label": "Woreda/Subcity",
                 "placeholder": "ወረዳ/ክፍለ ከተማ ",
                 "field": "City_Village"
-            },
+            }, 
             "customAttributes": {
               "label": "Phone Number",
               "placeholder": "ስልክ ቁጥር",
               "fields": ["Phone Number"]
+            },
+            "programAttributes": {
+                "label": "ART No.",
+                "placeholder": "ART_No.",
+                "field": "ID_Number"
+              },
+              "searchByPatientIdentifier": true
             }
-          }
+          
     }
 }

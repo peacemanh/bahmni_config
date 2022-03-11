@@ -1,4 +1,7 @@
-    {
+{
+    "MODULE_LABEL_TRIAGE_KEY": "Triage",
+    "MODULE_LABEL_EMERGENCY_TRIAGE_KEY": "Emergency Triage",
+    "MODULE_LABEL_CENTRAL_TRIAGE_KEY": "Central Triage",
     "MODULE_LABEL_REGISTRATION_KEY": "Registration",
     "MODULE_LABEL_CLINICAL_KEY": "Clinical",
     "MODULE_LABEL_INPATIENT_KEY": "InPatient",
