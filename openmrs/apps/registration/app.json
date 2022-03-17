@@ -224,6 +224,7 @@
         "fieldValidation" : {
             "registrationNumber" : {"pattern" : "[0-9]{6,7}", "errorMessage" : "Should between 6 and 7 characters"},
             "primaryContact" : {"pattern" : "[0-9]{8,10}", "errorMessage" : "Should be 12 characters starting with 91 (country code)"},
+            "Phone Number" : {"pattern" : "[0-9]{10,10}", "errorMessage" : "Should be 10 characters starting with 0"},
             "landHolding" : {"pattern" : "[0-9]{0,3}", "errorMessage" : "Should be between 1 to 999 acres"},
             "familyName" : {"pattern" : "[a-zA-Z]{0,}", "errorMessage" : "Should contain characters"},
             "givenName" : {"pattern" : "[a-zA-Z]{0,}", "errorMessage" : "Should contain characters"},
