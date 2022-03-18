@@ -246,9 +246,17 @@
                 "label": "ART No.",
                 "placeholder": "ART_No.",
                 "field": "ID_Number"
-              },
+            },
               "searchByPatientIdentifier": true
+        },
+        "patientSearchResults": {
+            "address": {
+                "fields" : ["cityVillage","country"]
+            },
+            "personAttributes": {
+                "fields" : ["Phone Number"]
             }
-          
+        }
+
     }
 }
