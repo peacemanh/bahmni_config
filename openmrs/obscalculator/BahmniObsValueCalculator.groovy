@@ -181,6 +181,25 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
                 voidObs(calculatedObs)
             }
         }
+        BahmniObservation triageDateTimeTriage = find("Trige Date and Time of Triage", observations, null)
+        BahmniObservation arrivalDateTimeTriage = find("Trige Date and time of Arrival", observations, null)
+        if (hasValue(triageDateTimeTriage) && hasValue(arrivalDateTimeTriage)){
+            
+            def pattern = "yyyy-MM-dd hh:mm"
+            def triage = triageDateTimeTriage.getValue() as String
+            def arrival = arrivalDateTimeTriage.getValue() as String
+            def triageDate = (Date.parse(pattern, triage))
+            def arrivalDate = Date.parse(pattern, arrival)
+            def duration = arrivalDate - triageDate
+            def durationTime = groovy.time.TimeCategory.minus(triageDate,arrivalDate);
+            BahmniObservation triageWaitingTimeObs = find("Triage Waiting Time", observations, null)
+            Date obsDatetime = getDate(triageDateTimeTriage)
+
+            triageWaitingTimeObs = triageWaitingTimeObs ?: createObs("Triage Waiting Time", null, bahmniEncounterTransaction, obsDatetime) as BahmniObservation
+            triageWaitingTimeObs.setValue("${durationTime}")
+        
+         return
+        }
     }
 
     private static BahmniObservation obsParent(BahmniObservation child, BahmniObservation parent) {
