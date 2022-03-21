@@ -87,8 +87,9 @@
         "extensionParams": {
             "conceptName": "Emergency Department Triage Form",
             "translationKey": "EMERGENCY_DEPARTMENT_TRIAGE_FORM",
-            "conceptNames": ["Emergency Department Triage Form",
-                "Triage Score Result", "Triage Color Result", "Nutritional Values", "Triage Waiting Time"],
+            "conceptNames": ["Systolic Data", "RR Data", "Temperature Data", "Pulse Data",
+                "Triage Mobility", "Triage AVPU", "Triage Trauma", "Triage Red", "Triage Orange", "Triage Yellow",
+                "Triage Score Result", "Triage Color Result", "Nutritional Values", "Triage Other History", "Triage Intervention and Medication Given", "Nutritional Values", "Triage Waiting Time"],
             "required":true,
             "showLatest": true
         },
@@ -101,9 +102,10 @@
         "type": "erforms",
         "extensionParams": {
             "formName": "Emergency Department Triage Form",
-            "conceptNames": ["Emergency Department Triage Form",
-                "Triage Score Result", "Triage Color Result", "Nutritional Values", "Triage Waiting Time"],
-            "required":true,
+            "conceptNames": ["Systolic Data", "RR Data", "Temperature Data", "Pulse Data",
+                "Triage Mobility", "Triage AVPU", "Triage Trauma", "Triage Red", "Triage Orange", "Triage Yellow",
+                "Triage Score Result", "Triage Color Result", "Nutritional Values", "Triage Other History", "Triage Intervention and Medication Given", "Nutritional Values", "Triage Waiting Time"],
+           "required":true,
             "showLatest": true
         },
         "order": 3,
