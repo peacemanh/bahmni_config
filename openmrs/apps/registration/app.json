@@ -35,6 +35,7 @@
         "activeVisitUuid"
     ],
     "config" : {
+        "femaleOnlyVisitType":["ANC","OPD 1","OPD 2","OPD 3","OPD 4","Female 1","Gynecology Ward","GyniObs 1","GyniObs 2","GyniObs 3","Maternity 2","Maternity 3","Michu Clinic OPD","MCH OPD","Labour Ward","Gynecology Emergency","Ward C"],
         "erTriageVisitTypes":{
             "Male":["Adult ER", "Pediatrics ER"],
             "Other":["Gynecology Emergency", "Adult ER", "Labour Ward", "Pediatrics ER"]
