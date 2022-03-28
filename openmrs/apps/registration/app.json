@@ -112,7 +112,9 @@
             },
             "defaults":  {
                 "class": "General",
-                "landHolding": 2
+                "landHolding": 2,
+                "PaymentMethod" : "Cash",
+                "Originofreferral": "Self"
             }
         },
         
@@ -127,7 +129,7 @@
         },
 
         "autoCompleteFields":["familyName", "caste", "middleName", "givenName"],
-        "mandatoryPersonAttributes": ["Originofreferral", "PaymentMethod", "Free", "Credit Information", "InsuranceID", "credit companies"],
+        "mandatoryPersonAttributes": ["Free", "Credit Information", "InsuranceID", "credit companies"],
         "defaultVisitType": "OPD",
         "searchByIdForwardUrl": "/patient/{{patientUuid}}",
         "showMiddleName": true,
