@@ -181,6 +181,147 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
                 voidObs(calculatedObs)
             }
         }
+        BahmniObservation triageDateTimeTriage = find("Trige Date and Time of Triage", observations, null)
+        BahmniObservation arrivalDateTimeTriage = find("Trige Date and time of Arrival", observations, null)
+        if (hasValue(triageDateTimeTriage) && hasValue(arrivalDateTimeTriage)){
+            
+            def pattern = "yyyy-MM-dd hh:mm"
+            def triage = triageDateTimeTriage.getValue() as String
+            def arrival = arrivalDateTimeTriage.getValue() as String
+            def triageDate = (Date.parse(pattern, triage))
+            def arrivalDate = Date.parse(pattern, arrival)
+            def duration = arrivalDate - triageDate
+            def durationTime = groovy.time.TimeCategory.minus(triageDate,arrivalDate);
+            BahmniObservation triageWaitingTimeObs = find("Triage Waiting Time", observations, null)
+            Date obsDatetime = getDate(triageDateTimeTriage)
+
+            triageWaitingTimeObs = triageWaitingTimeObs ?: createObs("Triage Waiting Time", null, bahmniEncounterTransaction, obsDatetime) as BahmniObservation
+            triageWaitingTimeObs.setValue("${durationTime}")
+        
+         
+        }
+        BahmniObservation systolicObservation = find("Systolic Data", observations, null)
+        BahmniObservation rrObservation = find("RR Data", observations, null)
+        BahmniObservation temperatureObservation = find("Temperature Data", observations, null)
+        BahmniObservation mobilityObservation = find("Triage Mobility", observations, null)
+        BahmniObservation avpuObservation = find("Triage AVPU", observations, null)
+        BahmniObservation traumaObservation = find("Triage Trauma", observations, null)
+        BahmniObservation pulseObservation = find("Pulse Data", observations, null)
+
+        BahmniObservation redObservation = find("Triage Red", observations, null)
+        BahmniObservation orangeeObservation = find("Triage Orange", observations, null)
+        BahmniObservation yellowObservation = find("Triage Yellow", observations, null)
+        BahmniObservation greenObservation = find("Triage Green", observations, null)
+        BahmniObservation blackObservation = find("Triage Black", observations, null)
+
+        if (hasValue(systolicObservation) && hasValue(rrObservation) && hasValue(temperatureObservation)
+                && hasValue(mobilityObservation) && hasValue(avpuObservation) && hasValue(traumaObservation)
+                && hasValue(pulseObservation)){
+
+            Double systolic = systolicObservation.getValue() as Double
+            Double rr = rrObservation.getValue() as Double
+            Double temperature = temperatureObservation.getValue() as Double
+            Double pulse = pulseObservation.getValue() as Double
+            String mobility = mobilityObservation.getValue() as String
+            String avpu = avpuObservation.getValue() as String
+            boolean trauma = traumaObservation.getValue() as Boolean
+
+            int score = 0;
+
+            if(101 <= systolic && systolic <= 199)
+                score += 0
+            else if(81 <= systolic && systolic <= 100)
+                score += 1
+            else if((71 <= systolic && systolic <= 80 ) || systolic > 199)
+                score += 2
+            else if(systolic < 71)
+                score += 3
+
+            if(12 <= rr && rr <= 20)
+                score += 0
+            else if(21 <= rr && rr <= 28)
+                score += 1
+            else if(29 <= rr && rr <= 39)
+                score += 2    
+            else if(rr >= 40 || rr < 12 )
+                score += 3
+
+            if(35 <= temperature && temperature <= 38.4)
+                score += 0
+            else if(temperature < 35 || temperature > 38.4)
+                score += 2
+
+            if(51 <= pulse && pulse <= 100)
+                score += 0
+            else if((41 <= pulse && pulse <= 50 ) || (101 <= pulse && pulse <= 110))
+                score += 1
+            else if(pulse < 41 || (111 <= pulse && pulse <= 129))
+                score += 2
+            else if(pulse > 129)
+                score += 3
+
+            if(mobility.contains("Triage walking"))
+                score += 0
+            else if(mobility.contains("Triage With help"))
+                score += 1
+            else if(mobility.contains("Triage Stretcher/ Immobile"))
+                score += 2
+
+            if(avpu.contains("Alert"))
+                score += 0
+            else if(avpu.contains("Triage Reacts to Voice"))
+                score += 1
+            else if(avpu.contains("Triage Reacts to pain"))
+                score += 2
+            else if(avpu.contains("UNRESPONSIVE"))
+                score += 3
+
+            if(trauma == true)
+                score += 1
+            else
+                score += 0
+
+            String triageColor
+
+            if(hasValue(redObservation))
+                triageColor = "RED"
+            else if(hasValue(orangeeObservation)){
+                if(score >= 7)
+                    triageColor = "RED"
+                else
+                    triageColor = "ORANGE"
+            }else if(hasValue(yellowObservation)){
+                if(score >= 7 )
+                    triageColor = "RED"
+                else if(5 <= score && score <= 6)
+                    triageColor = "ORANGE"
+                else
+                    triageColor = "YELLOW"
+            }else{
+                if(score >= 7 )
+                    triageColor = "RED"
+                else if(5 <= score && score <= 6)
+                    triageColor = "ORANGE"
+                else if(3 <= score && score <= 4)
+                    triageColor = "YELLOW"
+                else
+                    triageColor = "GREEN"
+            }
+
+            if(hasValue(blackObservation))
+                triageColor = "BLACK"
+
+            BahmniObservation triageScoreObservation = find("Triage Score Result", observations, null)
+            BahmniObservation triageColorObservation = find("Triage Color Result", observations, null)
+
+            Date obsDatetime = getDate(systolicObservation)
+
+            triageScoreObservation = triageScoreObservation ?: createObs("Triage Score Result", null, bahmniEncounterTransaction, obsDatetime) as BahmniObservation
+            triageColorObservation = triageColorObservation ?: createObs("Triage Color Result", null, bahmniEncounterTransaction, obsDatetime) as BahmniObservation
+
+            triageScoreObservation.setValue(score)
+            triageColorObservation.setValue(triageColor)
+        }
     }
 
     private static BahmniObservation obsParent(BahmniObservation child, BahmniObservation parent) {
