@@ -35,7 +35,7 @@
         "activeVisitUuid"
     ],
     "config" : {
-        "femaleOnlyVisitType":["ANC","OPD 1","OPD 2","OPD 3","OPD 4","Female 1","Gynecology ward","GyniObs OPD 1","GyniObs OPD 2","GyniObs OPD 3","Maternity 2","Maternity 3","Michu Clinic OPD","MCH OPD","Labour Ward","Gynecology Emergency","Ward C(female only)"],
+        "femaleOnlyVisitType":["ANC", "Cervical screening OPD 1","Cervical screening OPD 2","ANC OPD 1","ANC OPD 2","ANC OPD 3","ANC OPD 4","OPD 1","OPD 2","OPD 3","OPD 4","Female 1","Gynecology ward","GyniObs OPD 1","GyniObs OPD 2","GyniObs OPD 3","Maternity 2","Maternity 3","Michu Clinic OPD","MCH OPD","Labour Ward","Gynecology Emergency","Ward C(female only)"],
         "erTriageVisitTypes":{
             "Male":["Adult ER", "Pediatrics ER"],
             "Other":["Gynecology Emergency", "Adult ER", "Labour Ward", "Pediatrics ER"]
