@@ -256,7 +256,7 @@
         },
         "patientSearchResults": {
             "address": {
-                "fields" : ["cityVillage","country"]
+                "fields" : ["city_village","country"]
             },
             "personAttributes": {
                 "fields" : ["Phone Number"]

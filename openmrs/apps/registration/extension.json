@@ -7,7 +7,7 @@
         "url": "#/patient/newERTriage",
         "icon": "fa-wheelchair",
         "order":6,
-        "requiredPrivilege": "app:emergency"
+        "requiredPrivilege": "app:ertriage"
       },
       "central_triage": {
         "id": "bahmni.registration.crTriage",
@@ -17,7 +17,7 @@
         "url": "#/patient/newCRTriage",
         "icon": "fa fa-user-plus",
         "order":2,
-        "requiredPrivilege": "app:emergency"
+        "requiredPrivilege": "app:centraltriage"
       },
      
     "search":{
