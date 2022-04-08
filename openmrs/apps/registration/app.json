@@ -49,7 +49,7 @@
         "patientInformation": {
             "insuranceInformation": {
                 "title": "Insurance Information",
-                "translationKey": "Insurance_Details",
+                "translationKey": "Insurance Details",
                 "attributes": [
                     "InsuranceID",
                     "InsuranceName",
@@ -60,14 +60,7 @@
             },
             "creditInformation": {
                 "title": "Credit Information",
-                "translationKey": "Credit_Details",
-                "attributes": [
-                    "Credit Information"
-                ]
-            },
-            "creditCompanies": {
-                "title": "Credit Companies",
-                "translationKey": "Credit Companies",
+                "translationKey": "Credit Details",
                 "attributes": [
                     "credit companies"
                 ]
