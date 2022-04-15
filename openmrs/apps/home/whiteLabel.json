@@ -1,11 +1,11 @@
 {
   "homePage": {
     "header_text": "<b>WELCOME TO<br />University of Gondar Comprehensive Specialized Hospital",
-    "logo": "/uogh/images/bahmniLogoFull.png",
+    "logo": "/gonder/images/bahmniLogoFull.png",
     "title_text": " "
   },
   "loginPage": {
-    "logo": "/uogh/images/bahmniLogoFull.png",
+    "logo": "/gonder/images/bahmniLogoFull.png",
     "showHeaderText": true,
     "showTitleText": false
   },
