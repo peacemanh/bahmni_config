@@ -426,6 +426,25 @@
                     }
                 }
             },
+            "otFollowupForm":{  
+                "translationKey":"Ot Followup Form",
+                "type":"otFollowupForm",
+                "isObservation":true,
+                "displayOrder":24,
+                "dashboardConfig":{  
+                    "showDetailsButton":true,
+                    "conceptNames":["Ot Observations Templates"],
+                    "numberOfVisits":4
+                },
+                "expandedViewConfig":{  
+                    "conceptNames":["Ot Observations Templates"],
+                    "numberOfVisits":4,
+                    "showDetailsButton":true,
+                    "pivotTable":{  
+
+                    }
+                }
+            },
             "admissionDetails":{  
                 "translationKey":"DASHBOARD_TITLE_ADMISSION_DETAILS_KEY",
                 "type":"admissionDetails",
