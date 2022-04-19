@@ -184,5 +184,237 @@
     "icon": "icon-user-md",
     "order": 6,
     "requiredPrivilege": "app:clinical:ordersTab"
+  },
+
+  "bahmniClinicalConceptSetGroupObservationsOTAnesthesiaDepartment": {
+    "id": "bahmni.clinical.conceptSetGroup.observations.OTAnesthesiaDepartment",
+    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.otobservations",
+    "type": "config",
+    "extensionParams": {
+      "conceptName": "Anesthesia Department",
+      "default": true
+    },
+    "order": 1,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalConceptSetGroupObservationsOTPostAnesthesia": {
+    "id": "bahmni.clinical.conceptSetGroup.observations.OTPostAnesthesia",
+    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.otobservations",
+    "type": "config",
+    "extensionParams": {
+      "conceptName": "Post Anesthesia form",
+      "default": true
+    },
+    "order": 1,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalConceptSetGroupObservationsOTWHOSafteyChecklist": {
+    "id": "bahmni.clinical.conceptSetGroup.observations.OTWHOSafteyChecklist",
+    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.otobservations",
+    "type": "config",
+    "extensionParams": {
+      "conceptName": "WHO Saftey checklist",
+      "default": true
+    },
+    "order": 1,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalConceptSetGroupObservationsOTPatientIncised": {
+    "id": "bahmni.clinical.conceptSetGroup.observations.OTpatientIncised",
+    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.otobservations",
+    "type": "config",
+    "extensionParams": {
+      "conceptName": "Patient incised",
+      "default": true
+    },
+    "order": 1,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalConceptSetGroupObservationsOTSafetyChecklist": {
+    "id": "bahmni.clinical.conceptSetGroup.observations.OTSafetyChecklist",
+    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.otobservations",
+    "type": "config",
+    "extensionParams": {
+      "conceptName": "Safety checklist",
+      "default": true
+    },
+    "order": 1,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalConceptSetGroupObservationsOTAnticipatedCriticalToSurgeon": {
+    "id": "bahmni.clinical.conceptSetGroup.observations.OTAnticipatedCriticalToSurgeon",
+    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.otobservations",
+    "type": "config",
+    "extensionParams": {
+      "conceptName": "Anticipated critical events to surgeon",
+      "default": true
+    },
+    "order": 3,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalConceptSetGroupObservationsOTAnticipatedCriticalToAnesthetist": {
+    "id": "bahmni.clinical.conceptSetGroup.observations.OTAnticipatedCriticalToAnesthetist",
+    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.otobservations",
+    "type": "config",
+    "extensionParams": {
+      "conceptName": "Anticipated critical events to Anesthetist",
+      "default": true
+    },
+    "order": 1,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalConceptSetGroupObservationsOTtoSurgeonsAnesthetistAndNurse": {
+    "id": "bahmni.clinical.conceptSetGroup.observations.OTAnticipatedCriticalToAnesthetist",
+    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.otobservations",
+    "type": "config",
+    "extensionParams": {
+      "conceptName": "to surgeons, Anesthetist and nurse",
+      "default": true
+    },
+    "order": 1,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalConceptSetGroupObservationsOTNurseTeam": {
+    "id": "bahmni.clinical.conceptSetGroup.observations.OTNurseTeam",
+    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.otobservations",
+    "type": "config",
+    "extensionParams": {
+      "conceptName": "To Nurse Team",
+      "default": true
+    },
+    "order": 1,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalConceptSetGroupObservationsOTNurseVerballyConfirms": {
+    "id": "bahmni.clinical.conceptSetGroup.observations.OTNurseVerballyConfirms",
+    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.otobservations",
+    "type": "config",
+    "extensionParams": {
+      "conceptName": "Nurse verbally confirms with the team",
+      "default": true
+    },
+    "order": 1,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalConceptSetGroupObservationsOTSurgeonAnesthesiaProfessional": {
+    "id": "bahmni.clinical.conceptSetGroup.observations.OTSurgeonAnesthesiaProfessional",
+    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.otobservations",
+    "type": "config",
+    "extensionParams": {
+      "conceptName": "Surgeon anesthesia professional and nurse verbally confirm(set)",
+      "default": true
+    },
+    "order": 1,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalConceptSetGroupObservationsOTTimeOut": {
+    "id": "bahmni.clinical.conceptSetGroup.observations.OTTimeOut",
+    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.otobservations",
+    "type": "config",
+    "extensionParams": {
+      "conceptName": "Time Out (before Skin Incision)",
+      "default": true
+    },
+    "order": 1,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalConceptSetGroupObservationsOTSignInBefore": {
+    "id": "bahmni.clinical.conceptSetGroup.observations.OTSignInBefore",
+    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.otobservations",
+    "type": "config",
+    "extensionParams": {
+      "conceptName": "Sign in Before Induction of anesthesia (set)",
+      "default": true
+    },
+    "order": 1,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalConceptSetGroupObservationsOTPrematureVitalSign": {
+    "id": "bahmni.clinical.conceptSetGroup.observations.OTPrematureVitalSign",
+    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.otobservations",
+    "type": "config",
+    "extensionParams": {
+      "conceptName": "Premature Vital Sign",
+      "default": true
+    },
+    "order": 1,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalConceptSetGroupObservationsOTVitalSignfor3Months": {
+    "id": "bahmni.clinical.conceptSetGroup.observations.OTVitalSignfor3Months",
+    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.otobservations",
+    "type": "config",
+    "extensionParams": {
+      "conceptName": "Vital Sign for 0-3 months",
+      "default": true
+    },
+    "order": 1,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalConceptSetGroupObservationsOTVitalSignfor5Months": {
+    "id": "bahmni.clinical.conceptSetGroup.observations.OTVitalSignfor5Months",
+    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.otobservations",
+    "type": "config",
+    "extensionParams": {
+      "conceptName": "Vital Sign for 0-5 months",
+      "default": true
+    },
+    "order": 1,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalConceptSetGroupObservationsOTVitalSignfor3to6Months": {
+    "id": "bahmni.clinical.conceptSetGroup.observations.OTVitalSignfor3to6Months",
+    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.otobservations",
+    "type": "config",
+    "extensionParams": {
+      "conceptName": "Vital Sign for 3-6 months",
+      "default": true
+    },
+    "order": 1,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalConceptSetGroupObservationsOTVitalSignforToddlers": {
+    "id": "bahmni.clinical.conceptSetGroup.observations.OTVitalSignforToddlers",
+    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.otobservations",
+    "type": "config",
+    "extensionParams": {
+      "conceptName": "Vital Sign for Toddlers (1-3yrs)",
+      "default": true
+    },
+    "order": 1,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalConceptSetGroupObservationsOTPreSchoolChildren": {
+    "id": "bahmni.clinical.conceptSetGroup.observations.OTPreSchoolChildren",
+    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.otobservations",
+    "type": "config",
+    "extensionParams": {
+      "conceptName": "Vital Sign for Pre School children (3-6)",
+      "default": true
+    },
+    "order": 1,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalConceptSetGroupObservationsOTVitalSignforSchoolAge": {
+    "id": "bahmni.clinical.conceptSetGroup.observations.OTVitalSignforSchoolAge",
+    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.otobservations",
+    "type": "config",
+    "extensionParams": {
+      "conceptName": "Vital Sign for School-age (6-12)",
+      "default": true
+    },
+    "order": 1,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalConceptSetGroupObservationsOTVitalsAdultSet": {
+    "id": "bahmni.clinical.conceptSetGroup.observations.OTVitalsAdultSet",
+    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.otobservations",
+    "type": "config",
+    "extensionParams": {
+      "conceptName": "Vitals Adult Set",
+      "default": true
+    },
+    "order": 1,
+    "requiredPrivilege": "app:clinical"
   }
 }
