@@ -490,7 +490,7 @@
         "maxRecentlyViewedPatients":10,
         "printing": {
             "title": "University of Gondar Hospital",
-            "header": "General Summary Report",
+            "header": "Trends Summary Report",
             "logo": "../images/bahmniLogo.jpg",
             "showNameAndImage": true
         },
@@ -692,7 +692,7 @@
         "maxRecentlyViewedPatients":10,
         "printing": {
             "title": "University of Gondar Hospital",
-            "header": "General Summary Report",
+            "header": "Patient Summary Report",
             "logo": "../images/bahmniLogo.jpg",
             "showNameAndImage": true
         },
