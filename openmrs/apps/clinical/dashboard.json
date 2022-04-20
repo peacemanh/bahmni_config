@@ -4,7 +4,7 @@
         "displayByDefault":true,
         "maxRecentlyViewedPatients":10,
         "printing": {
-            "title": "University of Gondar Hospital",
+            "title": "University of Gondar Comprehensive Specialized Hospital",
             "header": "General Summary Report",
             "logo": "../images/bahmniLogo.jpg",
             "showNameAndImage": true
@@ -423,6 +423,25 @@
                             "Albumin",
                             "Polymorph"
                         ]
+                    }
+                }
+            },
+            "otFollowupForm":{  
+                "translationKey":"Ot Followup Form",
+                "type":"otFollowupForm",
+                "isObservation":true,
+                "displayOrder":24,
+                "dashboardConfig":{  
+                    "showDetailsButton":true,
+                    "conceptNames":["Ot Observations Templates"],
+                    "numberOfVisits":4
+                },
+                "expandedViewConfig":{  
+                    "conceptNames":["Ot Observations Templates"],
+                    "numberOfVisits":4,
+                    "showDetailsButton":true,
+                    "pivotTable":{  
+
                     }
                 }
             },

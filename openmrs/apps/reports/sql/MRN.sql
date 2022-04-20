@@ -2,6 +2,7 @@ SELECT DISTINCT
   concat(pn.given_name, " ", ifnull(pn.family_name, " "))       AS "Patient Name",
   floor(DATEDIFF(DATE(v.date_started), p.birthdate) / 365)      AS "Age",
   p.gender                                                      AS "Gender",
+  paddress.state_province                                       AS "Region",
   paddress.city_village                                         AS "Woreda",
   u.username                                                    AS "MRU Officer",
   cn.name                                                      AS "Payment Method"
