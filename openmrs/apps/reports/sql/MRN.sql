@@ -15,7 +15,8 @@ FROM visit v
   JOIN patient_identifier_type pit ON pi.identifier_type = pit.patient_identifier_type_id
   JOIN person_name pn ON pn.person_id = p.person_id
   LEFT OUTER JOIN person_address paddress ON p.person_id = paddress.person_id
-  LEFT OUTER JOIN person_attribute pa ON p.person_id = pa.person_id AND person_attribute_type_id = '28'
+  LEFT OUTER JOIN person_attribute pa ON p.person_id = pa.person_id
+  JOIN person_attribute_type pat ON pat.person_attribute_type_id = pa.person_attribute_type_id AND pat.name="PaymentMethod"
   LEFT OUTER JOIN concept_name cn ON pa.value = cn.concept_id
 WHERE
     cast(v.date_created as date) BETWEEN '#startDate#' and '#endDate#'
