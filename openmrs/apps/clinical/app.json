@@ -86,7 +86,8 @@
                 "codedConceptName":"Chief Complaint",
                 "nonCodedConceptName":"Non-Coded Chief Complaint",
                 "durationRequired": false,
-                "allowAddMore": true
+                "allowAddMore": true,
+                "required":true
             },
             "Tuberculosis, Adverse Effects" :{
                 "multiSelect" : true,
@@ -127,6 +128,63 @@
             },
             "Accepted Family Planning methods": {
                 "multiSelect": true
+            },
+            "DN Brief Medical History":{
+                "required": true
+            },
+            "DN Date and time of death":{
+                "required": true
+            },
+            "DN Important physical examination finding":{
+                "required": true
+            },
+            "DN Immediate cause of death":{
+                "required": true
+            },
+            "DS Final diagnosis":{
+                "required": true
+            },
+            "Doctor who confirm death":{
+                "required": true
+            },
+            "DS Date of Discharge":{
+                "required": true
+            },
+            "Brief History of illness":{
+                "required": true
+            },
+            "DS Patient physical examination":{
+                "required": true
+            },
+            "Condition on discharge":{
+                "required": true
+            },
+            "History Notes":{
+                "required": true
+            },
+            "EDD":{
+                "allowFutureDates": true
+            },
+            "Initial evaluation, Appointment for next follow-up":{
+                "allowFutureDates":true
+            },
+            "Pattern of food intake":{
+                "multiSelect": true
+            },
+            "HP History and Physical Examination":{
+                "allowAddMore": true
+            },
+            "Order sheet":{
+                "allowAddMore": true
+            },
+            "PPH PPH-Follow Up Sheet":{
+                "allowAddMore": true
+            },
+            "Preclampsia and eclampsia chart":{
+                "allowAddMore": true
+            },
+            "PS Progress/Follow-up Sheet":{
+                "allowAddMore": true
             },
             "defaults": {
                 "Number of living children": 1,
