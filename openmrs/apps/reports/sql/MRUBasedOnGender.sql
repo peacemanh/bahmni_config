@@ -25,7 +25,7 @@ Age) as t
 UNION ALL
 select "Total", sum(s.Male), sum(s.Female), sum(s.Other), sum(Total)
  from(
-   select  "vt.name  AS "Age"",
+   select  vt.name  AS "Age",
   sum(if(p.gender='F',1,0)) as "Female",
   sum(if(p.gender='M',1,0)) as "Male",
   sum(if(p.gender='O',1,0)) as "Other",
