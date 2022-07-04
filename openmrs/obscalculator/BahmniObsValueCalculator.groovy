@@ -322,6 +322,50 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
             triageScoreObservation.setValue(score)
             triageColorObservation.setValue(triageColor)
         }
+
+        BahmniObservation pedEmergency = find("Ped Emergency", observations, null)
+        if (hasValue(pedEmergency)) {
+           BahmniObservation triageColorObservation = find("Triage Color Result", observations, null)
+           Date obsDatetime = getDate(pedEmergency)
+           parent = obsParent(pedEmergency, null)
+           triageColorObservation = triageColorObservation ?: createObs("Triage Color Result", parent, bahmniEncounterTransaction, obsDatetime) as BahmniObservation
+           String pedEmergencyValue = pedEmergency.getValue() as String
+           if(pedEmergencyValue.contains("Red")){
+                    triageColorObservation.setValue("Red")
+                }
+            if(pedEmergencyValue.contains("Yellow")){
+                    triageColorObservation.setValue("Yellow")
+                } 
+            if(pedEmergencyValue.contains("Green")){
+                    triageColorObservation.setValue("Green")
+                }       
+            return
+        }
+
+        BahmniObservation edAssesment = find("ED Triage, Assessment", observations, null)
+        if (hasValue(edAssesment)) {
+           BahmniObservation triageColorObservation = find("Triage Color Result", observations, null)
+           Date obsDatetime = getDate(edAssesment)
+           parent = obsParent(edAssesment, null)
+           triageColorObservation = triageColorObservation ?: createObs("Triage Color Result", parent, bahmniEncounterTransaction, obsDatetime) as BahmniObservation
+           String edAssesmentValue = edAssesment.getValue() as String
+           if(edAssesmentValue.contains("Red")){
+                    triageColorObservation.setValue("Red")
+                }
+            if(edAssesmentValue.contains("Yellow")){
+                    triageColorObservation.setValue("Yellow")
+                } 
+            if(edAssesmentValue.contains("Green")){
+                    triageColorObservation.setValue("Green")
+                }  
+            if(edAssesmentValue.contains("Orange")){
+                    triageColorObservation.setValue("Orange")
+                }
+            if(edAssesmentValue.contains("Black")){
+                    triageColorObservation.setValue("Black")
+                }             
+            return
+        }
     }
 
     private static BahmniObservation obsParent(BahmniObservation child, BahmniObservation parent) {
