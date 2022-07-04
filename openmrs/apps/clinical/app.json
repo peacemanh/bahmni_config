@@ -23,6 +23,9 @@
         "visitUuid"
     ],
     "config": {
+        "paymentConfig":{
+            "disable checking": false
+        },
         "hideConditions": false,
         "enableRadiologyOrderOptions":["Urgent","NeedsPrint"],
         "enableLabOrderOptions":["Urgent", "NeedsPrint"],
