@@ -40,6 +40,10 @@
             "Male":["Adult ER", "Pediatrics ER"],
             "Other":["Gynecology Emergency", "Adult ER", "Labour Ward", "Pediatrics ER"]
         },
+        "paymentConfig":{
+            "disable billing": false,
+            "payment window": 30
+        },
         "erTriageFormLookup":{
             "Gynecology Emergency":["edconfig","edforms"],
             "Adult ER": ["erconfig","erforms"],

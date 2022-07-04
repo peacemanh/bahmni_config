@@ -169,16 +169,7 @@
                     "numberOfVisits":4
                 }
             },
-            "pacs":{  
-                "orderType":"Radiology Order",
-                "type":"pacsOrders",
-                "translationKey":"DASHBOARD_TITLE_PACS_KEY",
-                "displayOrder":8,
-                "dashboardConfig":{  
-                    "pacsImageUrl":"/oviyam2/oviyam?patientID={{patientID}}&accessionNumber={{orderNumber}}",
-                    "numberOfVisits":4
-                }
-            },
+            
             "labOrdersDisplayControl":{  
                 "translationKey":"DASHBOARD_TITLE_LAB_ORDERS_DISPLAY_CONTROL_KEY",
                 "type":"ordersControl",
@@ -518,16 +509,6 @@
                 "translationKey":"DASHBOARD_TITLE_PATIENT_INFORMATION_KEY",
                 "type":"patientInformation",
                 "patientAttributes":[  
-                    "caste",
-                    "class",
-                    "education",
-                    "occupation",
-                    "debt",
-                    "distanceFromCenter",
-                    "isUrban",
-                    "cluster",
-                    "RationCard",
-                    "familyIncome"
                 ],
                 "addressFields":[  
                     "address1",
@@ -537,41 +518,6 @@
                 ],
                 "displayOrder":0
             },
-            "adultERTriageForm": {
-                "title": "Adult ER Triage Form",
-                "printing": {
-                    "title": "Adult ER Triage Form",
-                    "header": "Adult ER Triage Form",
-                    "logo": "../images/bahmniLogo.png"
-                },
-                "sections": {
-                
-                    "Adult ER Triage Form":{
-                        "translationKey":"Adult ER Triage Form",
-                        "type":"adultERTriageForm",
-                        "isObservation":true,
-                        "displayOrder":14,
-                        "dashboardConfig":{
-                            "conceptNames":[
-                                "Emergency Triage Form"
-                            ],
-                            "showDetailsButton":true,
-                            "numberOfVisits":2
-                        },
-                        "expandedViewConfig":{
-                            "conceptNames":[
-                                "Emergency Triage Form"
-                            ],
-                            "numberOfVisits":2,
-                            "scope":"latest",
-                            "showDetailsButton":true,
-                            "pivotTable":{
-        
-                            }
-                        }
-                    }
-                }
-            },   
             "growthChart":{  
                 "type":"observationGraph",
                 "translationKey": "DASHBOARD_TITLE_GROWTH_CHART",
