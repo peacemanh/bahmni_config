@@ -110,6 +110,16 @@
     "order": 8,
     "requiredPrivilege": "app:reports"
   },
+  "assignExamRoom": {
+    "id": "bahmni.assignr",
+    "extensionPointId": "org.bahmni.home.dashboard",
+    "type": "link",
+    "translationKey": "MODULE_EXAM_ROOM_KEY",
+    "url": "../registration/index.html#/assignExamRoom",
+    "icon": "fa-list",
+    "order": 8,
+    "requiredPrivilege": "app:reports"
+  },
   "bahmniOT": {
     "id": "bahmni.ot",
     "extensionPointId": "org.bahmni.home.dashboard",
