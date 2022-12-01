@@ -164,7 +164,8 @@
                 "displayOrder":17,
                 "dashboardConfig":{  
                     "conceptNames":[  
-                        "Summary"
+                        "Radiology Notes",
+                        "Diagnostic Images"
                     ],
                     "numberOfVisits":4
                 }
