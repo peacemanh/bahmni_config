@@ -120,6 +120,16 @@
     "order": 8,
     "requiredPrivilege": "app:reports"
   },
+  "medicoLegal": {
+    "id": "bahmni.medicolegal",
+    "extensionPointId": "org.bahmni.home.dashboard",
+    "type": "link",
+    "translationKey": "MODULE_MEDICO_LEGAL_KEY",
+    "url": "../registration/index.html#/medicoLegal",
+    "icon": "fa-legal",
+    "order": 8,
+    "requiredPrivilege": "app:medicoLegal"
+  },
   "bahmniOT": {
     "id": "bahmni.ot",
     "extensionPointId": "org.bahmni.home.dashboard",
