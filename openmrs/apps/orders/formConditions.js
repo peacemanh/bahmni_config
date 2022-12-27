@@ -11,7 +11,7 @@ Bahmni.ConceptSet.FormConditions.rules = {
     'Summary' : function (formName, formFieldValues, patient) {
             var confNotes = formFieldValues['Radiology Notes Suggestion'];
             var ans = _.filter(patient.docpriv, function(priv){
-                return true//priv.name == 'Write Radiology note'
+                return priv.name == 'Write Radiology note'
             })
             
             if(ans.length==0){
