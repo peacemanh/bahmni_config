@@ -840,6 +840,76 @@
             }
         }
     },
+    "MedicalCertificate": {
+        "title": "Medical Certificate",
+        "printing": {
+            "title": "University of Gondar Comprehensive Specialized Hospital",
+            "header": "Medical Certificate",
+            "logo": "../images/bahmniLogo.png"
+        },
+        "sections": {
+            "Medical Certificate":{
+                "translationKey":"Medical Certificate",
+                "type":"obsToObsFlowSheet",
+                "isObservation":true,
+                "displayOrder":27,
+                "dashboardConfig":{
+                    "conceptNames":[
+                        "Medical Certificate"
+                        
+                    ],
+                    "showDetailsButton":true,
+                    "numberOfVisits":2
+                },
+                "expandedViewConfig":{
+                    "conceptNames":[
+                        "Medical Certificate"
+                    ],
+                    "numberOfVisits":2,
+                    "scope":"latest",
+                    "showDetailsButton":true,
+                    "pivotTable":{
+
+                    }
+                }
+            }
+        }
+    },
+    "BirthNotificationRegistration": {
+        "title": "Birth Notification Registration",
+        "printing": {
+            "title": "University of Gondar Comprehensive Specialized Hospital",
+            "header": "Birth Notification Registration",
+            "logo": "../images/bahmniLogo.png"
+        },
+        "sections": {
+            "Medical Certificate":{
+                "translationKey":"Birth Notification Registration",
+                "type":"obsToObsFlowSheet",
+                "isObservation":true,
+                "displayOrder":28,
+                "dashboardConfig":{
+                    "conceptNames":[
+                        "Birth Notification Registration"
+                        
+                    ],
+                    "showDetailsButton":true,
+                    "numberOfVisits":2
+                },
+                "expandedViewConfig":{
+                    "conceptNames":[
+                        "Birth Notification Registration"
+                    ],
+                    "numberOfVisits":2,
+                    "scope":"latest",
+                    "showDetailsButton":true,
+                    "pivotTable":{
+
+                    }
+                }
+            }
+        }
+    },
     "PathologyDiagnosticReport": {
         "title": "Pathology Diagnostic Report",
         "printing": {
