@@ -75,6 +75,27 @@
                 "attributes": [
                     "CBHI agreed woredas"
                 ]
+            },
+            "maritalStatus": {
+                "title": "Marital Status",
+                "translationKey": "Marital Status",
+                "attributes": [
+                    "Marital Status"
+                ]
+            },
+            "education": {
+                "title": "Educational Level",
+                "translationKey": "Educational Level",
+                "attributes": [
+                    "education"
+                ]
+            },
+            "occupation": {
+                "title": "Occupation",
+                "translationKey": "Occupation",
+                "attributes": [
+                    "occupation"
+                ]
             },            
             "freeInformation": {
                 "title": "Free",
