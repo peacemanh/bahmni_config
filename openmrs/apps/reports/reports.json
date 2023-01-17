@@ -2,7 +2,7 @@
     "MRU Report With Visit": {
         "name": "MRU Report With Visit",
         "type": "MRSGeneric",
-        "requiredPrivilege": "app:reports",
+        "requiredPrivilege": "MRU Report",
         "config": {
           "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/MRU.sql"
         }
@@ -10,7 +10,7 @@
     "MRU Report Based on Gender": {
         "name": "MRU Report Based on Gender",
         "type": "MRSGeneric",
-        "requiredPrivilege": "app:reports",
+        "requiredPrivilege": "MRU Report",
         "config": {
           "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/MRUBasedOnGender.sql"
         }
@@ -18,7 +18,7 @@
     "MRU Report Based on Payment Type": {
         "name": "MRU Report Based on Payment Type",
         "type": "MRSGeneric",
-        "requiredPrivilege": "app:reports",
+        "requiredPrivilege": "MRU Report",
         "config": {
           "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/MRUBasedOnPaymentType.sql"
         }
@@ -26,7 +26,7 @@
     "MRU Report Based on Service Unit": {
         "name": "MRU Report Based on Service Unit",
         "type": "MRSGeneric",
-        "requiredPrivilege": "app:reports",
+        "requiredPrivilege": "MRU Report",
         "config": {
           "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/MRUBasedOnServiceUnit.sql"
         }
@@ -34,7 +34,7 @@
     "MRU Report Based on Status": {
         "name": "MRU Report Based on Status",
         "type": "MRSGeneric",
-        "requiredPrivilege": "app:reports",
+        "requiredPrivilege": "MRU Report",
         "config": {
           "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/MRUBasedOnStatus.sql"
         }
@@ -42,7 +42,7 @@
     "MRU Report Based on Medico Legal Cases": {
         "name": "MRU Report Based on Medico Legal Cases",
         "type": "MRSGeneric",
-        "requiredPrivilege": "app:reports",
+        "requiredPrivilege": "MRU Report",
         "config": {
           "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/MRUBasedOnMedicoLegalCases.sql"
         }
@@ -50,7 +50,7 @@
     "MRU Report": {
         "name": "MRU Report",
         "type": "MRSGeneric",
-        "requiredPrivilege": "app:reports",
+        "requiredPrivilege": "MRU Report",
         "config": {
           "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/MRN.sql"
         }
