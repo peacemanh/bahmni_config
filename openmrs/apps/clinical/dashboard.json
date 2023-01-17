@@ -213,6 +213,105 @@
                     "numberOfVisits":10
                 }
             },
+            "PathologyOrders":{  
+                "orderType":"Pathology Order",
+                "type":"ordersControl",
+                "translationKey":"DASHBOARD_TITLE_PATHOLOGY_ORDERS_KEY",
+                "displayOrder":7,
+                "dashboardConfig":{
+				"showDetailsButton":true,	
+                    "conceptNames":[  
+                        "Summary"						
+                    ],
+                    "numberOfVisits":4
+                }
+			},
+
+            "PathologyDiagnostic Report":{  
+                "orderType":"Pathology Order",
+                "type":"ordersControl",
+                "translationKey":"DASHBOARD_TITLE_PATHOLOGY_DIAGNOSTIC_REPORT_KEY",
+                "displayOrder":7,
+                "dashboardConfig":{
+		        "showDetailsButton":true,	
+                    "conceptNames":[  
+                        "Pathology Final Diagnosis",
+		 	            "Micro Description",
+                        "Gross Description",
+                        "FNAC Specimen Details",
+                        "BF Specimen Details",
+                        "BMA Specimen Details",
+                        "Biopsy Specimen Details",
+                        "Scanned Pathology Investigation",
+                        "Procedure and Adequacy Details",
+                        "Biopsy Procedure Date",
+                        "GC Procedure Date"						
+                    ],
+                    "numberOfVisits":4
+                },
+                "expandedViewConfig":{
+                    "showDetailsButton":true,  
+                    "conceptNames":[  
+                        "Pathology Final Diagnosis",
+                        "Micro Description",
+                        "Gross Description",
+                        "FNAC Specimen Details",
+                        "BF Specimen Details",
+                        "BMA Specimen Details",
+                        "Biopsy Specimen Details",
+                        "Scanned Pathology Investigation",
+                        "Procedure and Adequacy Details",
+                        "Biopsy Procedure Date",
+                        "GC Procedure Date"
+ 
+                    ],
+                    "numberOfVisits":2,
+                    "showDetailsButton":true,
+                    "pivotTable":{  
+
+                    }
+                }				
+            },
+            "ProcedureOrders":{  
+                "orderType":"Procedure Order",
+                "type":"ordersControl",
+                "translationKey":"DASHBOARD_TITLE_PROCEDURE_ORDERS_KEY",
+                "displayOrder":7,
+                "dashboardConfig":{
+		        "showDetailsButton":true,	
+                    "conceptNames":[  
+                        "Summary"						
+                    ],
+                    "numberOfVisits":4
+                }
+	   },
+
+            "ProcedureNotes":{  
+                "orderType":"Procedure Order",
+                "type":"ordersControl",
+                "translationKey":"DASHBOARD_TITLE_PROCEDURE_NOTES_KEY",
+                "displayOrder":7,
+                "dashboardConfig":{
+		     "showDetailsButton":true,	
+                   "conceptNames":[  
+                        "Procedure Note",
+			            "Procedure Notes"
+						
+                    ],
+                    "numberOfVisits":4
+                },
+                "expandedViewConfig":{  
+                    "conceptNames":[  
+                        "Procedure Note",
+			            "Procedure Notes"
+                    ],
+                    "numberOfVisits":2,
+                    "showDetailsButton":true,
+                    "pivotTable":{  
+
+                    }
+                }				
+            },            
             "nutritionalValues":{  
                 "translationKey":"DASHBOARD_TITLE_NUTRITIONAL_VALUES_KEY",
                 "type":"vitals",
@@ -740,5 +839,60 @@
                 }
             }
         }
-    }
+    },
+    "PathologyDiagnosticReport": {
+        "title": "Pathology Diagnostic Report",
+        "printing": {
+            "title": "University of Gondar Comprehensive Specialized Hospital",
+            "header": "Pathology Diagnostic Report",
+            "logo": "../images/bahmniLogo.png"
+        },
+        "sections": {
+            "PathologyDiagnostic Report":{
+                "orderType":"Pathology Order",
+                "type":"ordersControl",
+                "translationKey":"DASHBOARD_TITLE_PATHOLOGY_DIAGNOSTIC_REPORT_KEY",
+                "displayOrder":7,
+                "dashboardConfig":{
+                "showDetailsButton":true,
+                    "conceptNames":[
+                        "Pathology Final Diagnosis",
+                        "Micro Description",
+                        "Gross Description",
+                        "FNAC Specimen Details",
+                        "BF Specimen Details",
+                        "BMA Specimen Details",
+                        "Biopsy Specimen Details",
+                        "Scanned Pathology Investigation",
+                        "Procedure and Adequacy Details",
+                        "Biopsy Procedure Date",
+                        "GC Procedure Date"
+                    ],
+                    "numberOfVisits":1
+                },
+                "expandedViewConfig":{
+                    "showDetailsButton":true,
+                    "conceptNames":[
+                        "Pathology Final Diagnosis",
+                        "Micro Description",
+                        "Gross Description",
+                        "FNAC Specimen Details",
+                        "BF Specimen Details",
+                        "BMA Specimen Details",
+                        "Biopsy Specimen Details",
+                        "Scanned Pathology Investigation",
+                        "Procedure and Adequacy Details",
+                        "Biopsy Procedure Date",
+                        "GC Procedure Date"
+
+                    ],
+                    "numberOfVisits":1,
+                    "showDetailsButton":true,
+                    "pivotTable":{
+
+                    }
+                }
+            }
+          }	
+       }    
 }
