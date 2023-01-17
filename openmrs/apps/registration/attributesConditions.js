@@ -1,3 +1,20 @@
+var maritalStatus= function (patient) {
+    var returnValues = {
+        show: [],
+        hide: []
+    };
+        if (patient["age"].years >= 10) {
+        returnValues.show.push("education", "occupation", "maritalStatus")
+    }else if ((patient["age"].years < 10) && (patient["age"].years >= 4)) {
+        returnValues.hide.push("maritalStatus")
+        returnValues.show.push("education", "occupation")
+    } else if (patient["age"].years < 4) {
+        returnValues.hide.push("maritalStatus", "education", "occupation")
+    } else {
+        returnValues.hide.push("maritalStatus", "education", "occupation")
+    }
+    return returnValues
+};
 Bahmni.Registration.AttributesConditions.rules = {
     'PaymentMethod': function(patient) {
         var returnValues = {
