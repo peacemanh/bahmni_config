@@ -69,6 +69,13 @@
                     "credit companies"
                 ]
             },
+            "CBHIInformation": {
+                "title": "CBHI Information",
+                "translationKey": "CBHI Details",
+                "attributes": [
+                    "CBHI agreed woredas"
+                ]
+            },            
             "freeInformation": {
                 "title": "Free",
                 "translationKey": "Free",
