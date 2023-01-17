@@ -14,5 +14,37 @@
 	 "label": "Radiology Order",
 	 "order": 1,
 	 "requiredPrivilege": "app:orders"
-	 }
+	 },
+	"bahmniClinicalPatientsSearchProcedureOrderAllPatients":{
+	 "id": "bahmni.clinical.patients.search.ProcedureOrderAllPatients",
+	 "extensionPointId": "org.bahmni.patient.search",
+	 "type": "config",
+	 "extensionParams": {
+	  "searchHandler": "emrapi.sqlSearch.PatientsWithProcedureOrders",
+	  "display":"Procedure Orders",
+	   "translationKey": "MODULE_LABEL_PROCEDURE_ORDERS_KEY",
+	  "forwardUrl" : "../orders/#/patient/{{patientUuid}}/fulfillment/Procedure Order",
+	  "forwardButtonTitle" : "View",
+	  "view":"tabular"
+	 },
+	 "label": "Procedure Order",
+	 "order": 2,
+	 "requiredPrivilege": "app:procedureOrders"
+	 },
+	"bahmniClinicalPatientsSearchPathologyOrderAllPatients":{
+	 "id": "bahmni.clinical.patients.search.PathologyOrderAllPatients",
+	 "extensionPointId": "org.bahmni.patient.search",
+	 "type": "config",
+	 "extensionParams": {
+	  "searchHandler": "emrapi.sqlSearch.PatientsWithPathologyOrders",
+	  "display":"Pathology Orders",
+	   "translationKey": "MODULE_LABEL_PATHOLOGY_ORDERS_KEY",
+	  "forwardUrl" : "../orders/#/patient/{{patientUuid}}/fulfillment/Pathology Order",
+	  "forwardButtonTitle" : "View",
+	  "view":"tabular"
+	 },
+	 "label": "Pathology Order",
+	 "order": 3,
+	 "requiredPrivilege": "app:pathologyOrders"
+	 }	 
 }
