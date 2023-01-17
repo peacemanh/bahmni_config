@@ -27,7 +27,7 @@
     "url": "../clinical/#/programs/patient/search",
     "icon": "icon-bahmni-program",
     "order": 2,
-    "requiredPrivilege": "app:clinical"
+    "requiredPrivilege": "app:programs"
   },
   "clinical": {
     "id": "bahmni.clinical",
@@ -118,7 +118,7 @@
     "url": "../registration/index.html#/assignExamRoom",
     "icon": "fa-list",
     "order": 8,
-    "requiredPrivilege": "app:reports"
+    "requiredPrivilege": "app:assignExamRoom"
   },
   "medicoLegal": {
     "id": "bahmni.medicolegal",
