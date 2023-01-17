@@ -4,7 +4,7 @@
         "extensionPointId": "org.bahmni.registration.triage.dashboard",
         "type": "link",
         "label": "Emergency Triage",
-        "url": "#/patient/newERTriage",
+        "url": "#/erSearch",
         "icon": "fa-wheelchair",
         "order":6,
         "requiredPrivilege": "app:ertriage"
@@ -14,7 +14,7 @@
         "extensionPointId": "org.bahmni.registration.triage.dashboard",
         "type": "link",
         "label": "Central Triage",
-        "url": "#/patient/newCRTriage",
+        "url": "#/crSearch",
         "icon": "fa fa-user-plus",
         "order":2,
         "requiredPrivilege": "app:centraltriage"
