@@ -14,7 +14,57 @@
         },
         "Coded3": {
           "multiSelect": true
-        }
+        },
+         "Procedure Date": {  
+             "required": true,
+             "underlined":true,
+             "color":"red"				
+         },
+         "Biopsy Procedure Date": {
+             "required": true
+         },
+        "GC Procedure Date": {
+             "required": true
+         },
+			
+        "How NG Specimen was obtained": {  
+		"required": true
+        },            
+    	"How HP Specimen was obtained": {  
+			"required": true
+        },            
+        "How BF Specimen was obtained": {  
+    		"required": true
+        },
+        "NG Specimen Source": {  
+            "dropdown": false,
+		    "required": false
+        },   
+		"HP Specimen Source": {  
+              "dropdown": false,
+		      "required": false
+         },	
+		"BF Specimen Source": {  
+              "dropdown": false,
+		      "required": false
+        },
+         "NG Specimen Source Detail": {  
+              "dropdown": true				
+        },
+        "Specimen Part Type": {  
+             "dropdown": true				
+        },
+        "Specimen Class": {  
+            "required": true				
+        },			
+        "BF Source Laterality": {  
+             "dropdown": true				
+        },		
+        "who performs a procedure": {
+            "autocomplete":true,
+             "durationRequired": false,
+             "allowAddMore": false
+       }        
       },
       "sections": {
         "title": "Radiology Order FulFillment Form",
