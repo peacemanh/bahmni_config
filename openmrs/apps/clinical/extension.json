@@ -105,6 +105,58 @@
     "order": 2,
     "requiredPrivilege": "app:clinical"
   },
+    "bahmniClinicalPatientsWithLabresult": {
+    "id": "bahmni.clinical.patients.search.PatientsWithLabresult",
+    "extensionPointId": "org.bahmni.patient.search",
+    "type": "config",
+    "extensionParams": {
+      "searchHandler": "emrapi.sqlSearch.notifyPatientsWithLabResults",
+      "translationKey": "Patients with lab results",
+      "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+    },
+    "label": "Active",
+    "order": 3,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalPatientsWithRadiologyresult": {
+  "id": "bahmni.clinical.patients.search.PatientsWithRadiologyresult",
+  "extensionPointId": "org.bahmni.patient.search",
+  "type": "config",
+  "extensionParams": {
+    "searchHandler": "emrapi.sqlSearch.notifyPatientsWithRadiologyResults",
+    "translationKey": "Patients with radiology results",
+    "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+  },
+  "label": "Active",
+  "order": 3,
+  "requiredPrivilege": "app:clinical"
+},
+"bahmniClinicalPatientsWithPathologyresult": {
+"id": "bahmni.clinical.patients.search.PatientsWithPathologyresult",
+"extensionPointId": "org.bahmni.patient.search",
+"type": "config",
+"extensionParams": {
+  "searchHandler": "emrapi.sqlSearch.notifyPatientsWithPathologyResults",
+  "translationKey": "Patients with pathology results",
+  "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+},
+"label": "Active",
+"order": 3,
+"requiredPrivilege": "app:clinical"
+},
+"bahmniClinicalPatientsWithProcedureresult": {
+"id": "bahmni.clinical.patients.search.PatientsWithProcedureresult",
+"extensionPointId": "org.bahmni.patient.search",
+"type": "config",
+"extensionParams": {
+  "searchHandler": "emrapi.sqlSearch.notifyPatientsWithPathologyResults",
+  "translationKey": "Patients with Procedure results",
+  "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+},
+"label": "Active",
+"order": 3,
+"requiredPrivilege": "app:clinical"
+},
   "bahmniClinicalConceptSetGroupObservationsHistory": {
     "id": "bahmni.clinical.conceptSetGroup.observations.history",
     "extensionPointId": "org.bahmni.clinical.conceptSetGroup.observations",
