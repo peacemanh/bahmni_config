@@ -73,7 +73,7 @@
                     "translationKey":"DASHBOARD_TITLE_NAVIGATION_LINKS_CONTROL_KEY",
                     "type": "navigationLinksControl",
                     "displayOrder": 5,
-                    "showLinks" : ["home", "visit", "registration", "inpatient", "enrolment", "visitAttribute"]
+                    "showLinks" : ["home", "visit", "inpatient", "enrolment", "visitAttribute", "appointments"]
                 },
                 "conditions": {
                     "translationKey":"CONDITION_LIST_DISPLAY_CONTROL_TITLE",
